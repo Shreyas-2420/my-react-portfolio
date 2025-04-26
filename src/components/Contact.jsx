@@ -3,49 +3,45 @@ import React, { useState } from 'react';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const handleChange = e => {
-    setFormData({...formData, [e.target.name]: e.target.value});
+  const handleChange = (field, value) => {
+    setFormData({ ...formData, [field]: value });
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert(`Thank you for reaching out, ${formData.name}!`); 
-    setFormData({ name: '', email: '', message: '' });
+  const handleSend = () => {
+    if (formData.name && formData.email && formData.message) {
+      alert(`Thanks for reaching out, ${formData.name}!`);
+      setFormData({ name: '', email: '', message: '' });
+    } else {
+      alert('Please fill out all fields.');
+    }
   };
-  
 
   return (
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
+      <div className="contact-fields">
         <input 
           type="text" 
-          name="name" 
           placeholder="Your Name" 
           value={formData.name} 
-          onChange={handleChange} 
-          required 
+          onChange={(e) => handleChange('name', e.target.value)}
         />
         <input 
           type="email" 
-          name="email" 
           placeholder="Your Email" 
           value={formData.email} 
-          onChange={handleChange} 
-          required 
+          onChange={(e) => handleChange('email', e.target.value)}
         />
         <textarea 
-          name="message" 
           rows="5" 
           placeholder="Your Message" 
           value={formData.message} 
-          onChange={handleChange} 
-          required 
+          onChange={(e) => handleChange('message', e.target.value)}
         />
-        <button type="submit" className="btn">Send</button>
-      </form>
+        <button onClick={handleSend} className="btn">Send Message</button>
+      </div>
     </section>
   );
 };
 
-export default Contact;
+export default Contact;

@@ -5,13 +5,13 @@ const socialLinks = [
   {
     id: 1,
     icon: <FiGithub />,
-    url: "https://github.com/Mine",
+    url: "https://github.com/Shreyas-2420",
     label: "GitHub"
   },
   {
     id: 2,
     icon: <FiLinkedin />,
-    url: "https://linkedin.com/in/Shreyee",
+    url: "https://www.linkedin.com/in/shreyas-m-571317258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     label: "LinkedIn"
   },
   {
@@ -29,7 +29,7 @@ const socialLinks = [
   {
     id: 5,
     icon: <FiMail />,
-    url: "mailto:your@email.com",
+    url: "Shreyas2024m@email.com",
     label: "Email"
   },
 ];
