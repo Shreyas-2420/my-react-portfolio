@@ -8,8 +8,8 @@ const projects = [
   },
   {
     title: 'Project Two',
-    description: 'An awesome Node.js API for managing tasks.',
-    link: 'https://github.com/shreyasm/project-two',
+    description: 'A Fantasy Cricket Team |Builder lets users create custom cricket teams by selecting real players based on their performance stats',
+    link: 'https://github.com/Shreyas-2420/fantasy-cricket-team',
   },
 ];
 
