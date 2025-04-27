@@ -8,8 +8,8 @@ const projects = [
   },
   {
     title: 'Project Two',
-    description: 'An awesome Node.js API for managing tasks.',
-    link: 'https://github.com/shreyasm/project-two',
+    description: 'A Fantasy Cricket Team |Builder lets users create custom cricket teams by selecting real players based on their performance stats',
+    link: 'https://github.com/Shreyas-2420/fantasy-cricket-team',
   },
 ];
 
@@ -22,7 +22,7 @@ const Projects = () => {
           <div key={title} className="project-card">
             <h3>{title}</h3>
             <p>{description}</p>
-            <a href={link} target="_blank" rel="noopener noreferrer" className="btn">Let's Play</a>
+            <a href={link} target="_blank" rel="noopener noreferrer" className="btn">Check it out</a>
           </div>
         ))}
       </div>
